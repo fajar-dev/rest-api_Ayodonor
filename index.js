@@ -3,9 +3,10 @@ const dotenv = require("dotenv")
 const bodyParser = require("body-parser")
 
 // import routes
-const Routes = require("./app/routes")
+const kontakRoutes = require("./routes/kontakRoute")
 
 const app = express();
+const port = 4000
 
 //dotenv (.env) config
 dotenv.config()
@@ -15,8 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // //routes middleware
-app.use("/api", Routes)
+app.use("/api", kontakRoutes)
 
-app.listen(4000, () => {
-  console.log('Server is running at http://localhost:4000');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
