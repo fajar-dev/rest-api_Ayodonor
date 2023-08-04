@@ -1,5 +1,3 @@
-const db = require('../config/koneksi');
-const response = require('../app/response');
 
 const getKontak = (db) => async (req, res) => {
   try {
