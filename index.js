@@ -3,7 +3,7 @@ const dotenv = require("dotenv")
 const bodyParser = require("body-parser")
 
 // import routes
-const route = require("./routes/route")
+const route = require("./app/route")
 
 const app = express();
 const port = 4000
