@@ -19,6 +19,4 @@ router.get('/stok/:id', stokController.getStok(dbSlave));
 router.get('/jadwal', jadwalController.getJadwal(dbSlave));
 router.get('/jadwal/search', jadwalController.searchInstansi(dbSlave));
 
-
-
 module.exports = router;
