@@ -12,7 +12,7 @@ const getBerita = (db) => async (req, res) => {
     console.error(err);
     res.status(500).json({
       response: 500,
-      success: true,
+      success: false,
       message: 'error processing',
       data: []
     });
@@ -43,7 +43,7 @@ const getBeritaById = (db) => async (req, res) => {
     console.error(err);
     res.status(500).json({
       response: 500,
-      success: true,
+      success: false,
       message: 'error processing',
       data: []
     });
