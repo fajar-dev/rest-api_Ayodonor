@@ -25,8 +25,8 @@ const getBeritaById = (db) => async (req, res) => {
     const query = 'SELECT tb_berita.id, tb_berita.gambar as foto, tb_berita.judul as judul_berita, DATE_FORMAT(tb_berita.tgl,"%d %b %y")as tanggal_posting, tb_berita.berita as isi_berita, tb_berita.penulis, udd.nama FROM tb_berita JOIN udd ON tb_berita.udd = udd.id WHERE tb_berita.id = ? ORDER BY tb_berita.tgl DESC limit 20';
     const [results] = await db.promise().query(query, [id]);
     if (results.length === 0) {
-      res.status(204).json({
-        response: 204,
+      res.status(404).json({
+        response: 404,
         success: true,
         message: 'results not found',
         data: []
